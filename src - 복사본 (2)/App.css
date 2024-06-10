@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* reset */
+html,body { height:100%; }
+body,div,p,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,form,fieldset,button,input { margin:0; padding:0; }
+h1,h2,h3,h4 { font-size:12px; }
+ul,li,ol { list-style:none; }
+img,fieldset,iframe { border:0; }
+img { vertical-align:top; }
+table { border-collapse:collapse; }
+
+/* base */
+body {
+	font-family:'Noto Sans KR';
+	font-size:14px; 
+	font-weight:300;
+  line-height:1.5em;
+	color:#333;
+  background:white;
+}
+a { transition:0.5s; color:#333; text-decoration:none; }
+a:hover { color:yellow; } 
+.blind { position:absolute; top:-9999px; }
+
+
+/* layout */
+header { 
+  position:fixed; width:100%; z-index:1000; 
+  background-color:rgba(255,255,255,0.3);
+  /* border:3px dashed #ddd; */
+}
+.main { /* border:20px solid #fc0;  */}
+.sub1 {/* border:20px solid #0cc; height:600px;*/ }
+.sub2 { /* border:20px solid #fc0; */ /* height:600px; */ }
+footer { padding:30px; margin-top:20px; background:black; color:white; }
+
+
+/* header */
+h1 { padding:17px 20px; }
+h1 img { height:40px; }
+
+
+.gnb_btn .line { transition:0.3s; position:absolute; width:100%; height:2px; background:#333; }
+
+.gnb_btn .line:nth-child(1) { top:0px; }
+.gnb_btn .line:nth-child(2) { top:7px; }
+.gnb_btn .line:nth-child(3) { top:14px; }
+
+.gnb_btn.x .line:nth-child(1) { top:7px; transform:rotate(45deg); }
+.gnb_btn.x .line:nth-child(2) { opacity:0; }
+.gnb_btn.x .line:nth-child(3) { top:7px; transform:rotate(-45deg); }
+
+
+
+header {position: relative; width: 90%; margin: 0 auto; margin-top: 30px;}
+.gnb { background-color:rgba(255,255,255,0.9);}
+.gnb ul { position: absolute; right: 0; top: calc((100% - 61px)/2); display:flex; justify-content:space-between; gap: 3rem;  }
+.gnb ul li {text-align: center;}
+.gnb ul li img {width: 40px; }
+.gnb ul li a { font-weight:900; color:black; }
+.gnb ul li a:hover { opacity:0.7; font-weight:800; }
+.gnb ul.etc li { font-size:10px; line-height:17px; }
+
+
+
+/* main */
+.group { display:flex; flex-wrap:wrap;
+  justify-content:space-between; padding-top:20px;
+}
+
+.group .box { 
+  width:32%;
+  /* border:10px solid #333;  */
+  margin-top:10px; 
+  margin-bottom:10px; 
+  box-sizing:border-box;  
+  font-size:11px;
+  text-align:center;
+}
+.group .box img { width:100%; }
+.group .box .price { font-weight:600; color:black; }
+
+
+
+/* sub공통 */
+section { margin:0 auto; max-width:80%;  padding-top:48px; }
+section h2 { text-align:center; padding-top:20px; text-transform:uppercase; font-size:16px; font-weight:900;}
+section .slogan { font-size:10px; text-align:center; }
+
+
+/* sub1 */
+.sub1 .slogan { padding-bottom:30px;  }
+.sub1 img { width:100%; }
+.sub1 article { padding:20px; font-size:12px; }
+.sub1 h3 { font-size:33px; line-height:1em; font-weight:100; padding:20px 0; }
+.sub1 p { padding-bottom:20px; }
+
+
+.products { display:flex; flex-wrap:wrap; justify-content:space-between;  padding:20px; }
+.card { width:49%; text-align:center; font-size:12px; padding:20px 0;   }
+.card a { display: block; height: 400px; overflow: hidden;}
+.card img { width:100%; height: 100%; object-fit: cover; }
+.price { font-weight:900; }
+
+.more { text-align:center; }
+.more button { 
+    border:0; background:black;
+    color:white;
+    padding:3px 7px; cursor:pointer;
+    margin-bottom:30px;
+}
+.more button:hover { 
+  background:#0cc;
+}
+
+
+/* detail */
+.dtail { display:flex; }
+.photo { padding:10px 0; text-align:center; }
+.photo img { width:100%; }
+
+.description { text-align:center; }
+.description button { 
+    margin:10px; border:0; background:black; 
+    color:white; font-weight:900; padding:3px 33px; 
+}
+.description button:hover { background-color:#0cc; cursor:pointer; }
+
+/* footer */
+.sitemap { display:flex; justify-content:space-between; font-size:10px; }
+.info { padding-top:30px; font-size:10px; color:#ccc; line-height:1.5em; text-align:center; }
+.info .sns { display:flex; justify-content:center; padding-bottom:30px; }
+.info .sns li { width:50px; }
+.info .sns li img { height:15px; }
+
+
+
+
+@media all and (max-width:767px) { /* 스마트폰 */
+
+.products {flex-direction: column;}
+.card {width: 100%;}
+}
+
+@media all and (min-width:768px) and (max-width:1023px) { /* 테블릿 */
+  .card a {height: 250px;}
+}

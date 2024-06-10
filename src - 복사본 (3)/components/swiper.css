@@ -1,0 +1,43 @@
+.swiper {
+  width: 100%;
+  /* height:300px; */ /* 이미지 넣을땐 뺀다 */
+}
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#0cc;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+}
+.swiper-pagination { /* 메뉴영역 */
+	 bottom:10%; 
+	/* border:2px dashed blue;  */
+}
+.swiper-pagination .swiper-pagination-bullet { /* 메뉴 설정 */
+  width:10px; height:10px; border-radius:5px;
+  opacity:0,5;
+  background-color:white;
+} 
+.swiper-pagination .swiper-pagination-bullet-active { /* 메뉴 활성화 설정 */
+	background-color:white; 
+}
+
+.swiper-button-prev { left:50px; color:white; /* border:1px dashed yellow;*/ }
+.swiper-button-prev:after { /* display:none; */ }
+
+.swiper-button-next { right:50px; color:white; /*border:1px dashed yellow;*/ }
+.swiper-button-next:after { /* display:none; */ }
